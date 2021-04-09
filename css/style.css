@@ -1,0 +1,11 @@
+ul#gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  list-style: none;
+  justify-content: flex-start;
+}
+
+ul#gallery li {
+  margin-right: 10px;
+}

@@ -7,13 +7,6 @@ const ingredients = [
   'Приправы',
 ];
 
-// const listEl = document.querySelector('#ingredients');
-// const markupEl = ingredients.reduce((str, item) =>
-//   str + `<li>${item}</li>`,
-//   "");
-// console.log(markupEl);
-// listEl.innerHTML = markupEl;
-
 const listEl = document.querySelector('#ingredients');
 
 const items = ingredients.map(item => {
@@ -24,3 +17,11 @@ const items = ingredients.map(item => {
 console.log(items);
 
 listEl.append(...items);
+
+
+// const listEl = document.querySelector('#ingredients');
+// const markupEl = ingredients.reduce((str, item) =>
+//   str + `<li>${item}</li>`,
+//   "");
+// console.log(markupEl);
+// listEl.innerHTML = markupEl;
