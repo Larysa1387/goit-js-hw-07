@@ -18,6 +18,20 @@ const images = [
 
 const galleryEl = document.querySelector('#gallery');
 const elementOfGallery = document.createElement('li');
+
+const makeListOfImagesMarkup = ({url, alt}) => {
+return `<li><img src='${url}' alt = '${alt}' width = '240'></li>`;
+};
+
+const makeListOfImages = images
+  .map(makeListOfImagesMarkup)
+  .join('');
+console.log('~ makeListOfImages', makeListOfImages);
+
+galleryEl.insertAdjacentHTML("afterbegin", makeListOfImages);
+console.log('~ elementOfGallery', elementOfGallery);
+
+
 // const imagesItemsEl = images.map(image => {
 //   const elementOfGallery = document.createElement('li');
 //   const imageOfGallery = document.createElement('img');
@@ -29,17 +43,3 @@ const elementOfGallery = document.createElement('li');
 //   return elementOfGallery;
 // });
 // galleryEl.append(...imagesItemsEl);
-
-const makeListOfImagesMarkup = ({url, alt}) => {
-return `<li><img src='${url}' alt = '${alt}' width = '240'></li>`;
-};
-// console.log(makeListOfImages(images[0]));
-
-const makeListOfImages = images
-  .map(makeListOfImagesMarkup)
-  .join('');
-console.log('~ makeListOfImages', makeListOfImages);
-
-// galleryEl.appendChild(elementOfGallery);
-galleryEl.insertAdjacentHTML("afterbegin", makeListOfImages);
-console.log('~ elementOfGallery', elementOfGallery);
