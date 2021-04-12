@@ -5,6 +5,7 @@ const boxesContainer = document.querySelector('#boxes');
 
 
 function createBoxes(amount) {
+  boxesContainer.innerHTML = '';
   const divArr = [];
 
   for (let i = 1; i <= amount; i += 1) {
